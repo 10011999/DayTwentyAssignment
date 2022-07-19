@@ -10,6 +10,7 @@ public class AssignmentTwenty {
         pattern.lastName();
         pattern.email();
         pattern.mobile();
+        pattern.passWord();
 
     }
     public static void firstName() {
@@ -48,6 +49,15 @@ public class AssignmentTwenty {
             System.out.println("valid Mobile Number");
         else
             System.out.println("invalid Mobile Number");
+    }
+    public static void passWord() {
+        System.out.println("=== password ====");
+        Pattern pattern5 = Pattern.compile("^[A-Za-z0-9+@]{8,}$");
+        Matcher matcher5 = pattern5.matcher("Abhishek@99");
+        if (matcher5.find())
+            System.out.println("valid Password");
+        else
+            System.out.println("invalid Password");
     }
 
 }
