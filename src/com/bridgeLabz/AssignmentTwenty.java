@@ -9,6 +9,7 @@ public class AssignmentTwenty {
         pattern.firstName();
         pattern.lastName();
         pattern.email();
+        pattern.mobile();
 
     }
     public static void firstName() {
@@ -38,6 +39,15 @@ public class AssignmentTwenty {
             System.out.println("valid Email");
         else
             System.out.println("invalid Email");
+    }
+    public static void mobile() {
+        System.out.println("=== pre-defined-Mobile-Number ====");
+        Pattern pattern4 = Pattern.compile("^(91 )[0-9]{10}$");
+        Matcher matcher4 = pattern4.matcher("91 7757934629");
+        if (matcher4.find())
+            System.out.println("valid Mobile Number");
+        else
+            System.out.println("invalid Mobile Number");
     }
 
 }
