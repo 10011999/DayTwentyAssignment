@@ -8,6 +8,7 @@ public class AssignmentTwenty {
         AssignmentTwenty pattern = new AssignmentTwenty();
         pattern.firstName();
         pattern.lastName();
+        pattern.email();
 
     }
     public static void firstName() {
@@ -28,6 +29,15 @@ public class AssignmentTwenty {
             System.out.println("valid Name");
         else
             System.out.println("invalid Name");
+    }
+    public static void email() {
+        System.out.println("=== Email ====");
+        Pattern pattern3 = Pattern.compile("^[A-Za-z0-9+_.-]+@(.+)$");
+        Matcher matcher3 = pattern3.matcher("motewaraditya77@gmail.com");
+        if (matcher3.find())
+            System.out.println("valid Email");
+        else
+            System.out.println("invalid Email");
     }
 
 }
